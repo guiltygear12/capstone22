@@ -8,6 +8,62 @@
 ##### 개발환경: ADOBE XD, VS CODE, PHOTOSHOP, HTML, CSS, JS, JQUERY
 ##### 작품특징: 노트북을 메인으로 하여 다양한 고객층에 적합한 노트북을 판매하는 웹 쇼핑몰입니다
 
+## 5월 3일
+> 제품 상세페이지작업 진행중
+
+제품상세페이지 작업이 진행중이며 
+
+영역구분
+1. 제품 구매및 이미지영역
+    -완료
+2. 상세정보
+3. 제품 상세스팩
+4. 사용자 리뷰
+5. 구매시 유의사항
+
+목요일까지 작업을 끝내고 오류를 없에는것을 목표로 진행중
+
+오늘 사용된 새로운 문법
+
+```html
+<label for="cpu"><label style="color: crimson;">*</label>cpu</label>
+    <input type="text" list="cpu_options" />
+    <datalist id="cpu_options">
+        <option value="인텔 I9 12900HK" />
+        <option value="인텔 I7 12800HK" />
+        <option value="인텔 I5 12600HK" />
+        <option value="라이젠 9 6980HX" />
+        <option value="라이젠 7 6800H" />
+        <option value="라이젠 5 6600H" />
+    </datalist>
+```
+#### 결과화면
+<img src="./img/datalist.png">
+
+>간단한 html 코드 만으로 검색창이나 선택사항같은 느낌을 낼수있는 코드입니다
+
+<hr>
+
+```html
+<details class="notice">
+    <!-- 누르기전에 보이는 글씨 -->
+    <summary>배송</summary>
+    <!-- summary 아래에 나오는 코드는 summary를 누르면 나오게 됩니다. -->
+    <div>무료배송</div>
+    <div>도서 산간지역: 5000원</div>
+    <div>배송시작 예정날짜: 6/30 순차발송 예정</div>
+    <div>예약신청순으로 발송되며 예약순서에 따라 다소 늦어질수있습니다</div>
+</details>
+```
+#### 결과화면
+<img src="./img/detail.png">
+
+<img src="./img/detail_open.png">
+
+>버튼을 누르면 자세한내용을 보여주는 메뉴를 손쉽게 js 없이 만들수있는 코드입니다.
+
+
+
 ## 4월 30일
 
 메인페이지 완성되었음
