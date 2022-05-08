@@ -20,6 +20,41 @@
 
 전체적인 기본 프레임은 같아서 이전보다 빠른 작업이 진행될거같다
 
+##### 추가작업일지 
+
+마이페이지 4개의 페이지를 묶어서 작업이 종료 되었다
+리엑트/뷰를 사용하지 않기때문에 완전한 싱글페이지는 만들수없었지만
+제이쿼리와 css를 잘 사용하여 페이지 이동없이 내용만 바꿔서 화면전환 하는것에 성공하였다
+
+코드는 다음과 같다 
+
+```js
+// 마이페이지 왼쪽에 목록을 클릭하게되면
+$(".my_page_list>h3").click(function(){
+    // 해당 목록이 선택되며 밑줄이 그어진디
+    $(this).addClass("active")
+    $(this).siblings().removeClass("active")
+//  조건문 - 어떤 메뉴에 active 클래스가 포함되어있는지 확인후
+//  해당 목록에 맞는 콘텐츠 wrap에게 active 클래스를 추가하여 보이게 된다
+    if($(".my_page_list>h3#barsket.active").length) {
+        $('.my_page_right_title>h2').text("장바구니")
+        $('.barsket_wrap').addClass("active")
+        $('.barsket_wrap').siblings().removeClass("active")
+    } else if($(".my_page_list>h3#order.active").length) {
+        $('.my_page_right_title>h2').text("주문내역")
+        $('.order_wrap').addClass("active")
+        $('.order_wrap').siblings().removeClass("active")
+    } else if($(".my_page_list>h3#product.active").length) {
+        $('.my_page_right_title>h2').text("구매한 상품 관리")
+        $('.product_wrap').addClass("active")
+        $('.product_wrap').siblings().removeClass("active")
+    } else if($(".my_page_list>h3#as.active").length) {
+        $('.my_page_right_title>h2').text("A/S 예약관리")
+        $('.as_wrap').addClass("active")
+        $('.as_wrap').siblings().removeClass("active")
+    }
+})
+```
 
 ## 5월 4일
 > 주간목표설정
